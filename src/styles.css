@@ -1,0 +1,12 @@
+body {
+  background-image: url("https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/bccf010c-96bf-11e6-a78f-00163ed833e7/3941233754/virtualdj-18_gridview3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.navbar {
+  text-align: center;
+  justify-content: center;
+}
+.footer {
+  background-color: rgba(0, 0, 0, 0.2);
+}
