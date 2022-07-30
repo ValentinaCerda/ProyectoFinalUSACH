@@ -14,14 +14,11 @@ export const Lyric = () => {
           <form >
           <div className='formulario mb-3'>
              
-           
             <input className='form-control' type="text" />
-              onClick={()=>setEnabled(!enabled)}
-              className={className}
-              src={src}
+        
             <input className='form-control' type="text" />
           </div>
-          <button className='btn btn-info'>Buscar</button>
+          <button className='btn btn-info'onClick={()=>setEnabled(!enabled)} src={src}>Buscar</button>
         </form>
       </div>
 
