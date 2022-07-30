@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-// https://lyrics.ovh/ (web de API)
 
-export const Lyric = ({ setLyricProps }) => {
+export const SearchLyric = ({ setSearchLyricProps }) => {
   const [inputValue, setInputValue] = useState('');
   const inputChange = (event) => {
     setInputValue(event.target.value)
@@ -9,7 +8,7 @@ export const Lyric = ({ setLyricProps }) => {
   const submitPrevent = (event) => {
     event.preventDefault()
     if (inputValue.trim().lenght > 0) {
-      setLyricProps(api => [inputValue, ...api])
+      setSearchLyricProps(api => [inputValue, ...api])
       setInputValue('')
     }
   }
