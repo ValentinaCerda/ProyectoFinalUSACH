@@ -1,16 +1,15 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { Navbar } from "./components/Navbar"
+import React, { useState } from "react";
+import { Navbar } from "./components/Navbar";
+import { Background } from "./components/Background";
 import SearchLyric from "./components/SearchLyric";
 import Song from "./components/Song";
-//import Info from "./components/Info";
 import { Footer } from "./components/Footer"
 import axios from "axios";
 
 function App() {
   // Utilizar useState con 3 states
-  const [artista, agregarArtista] = useState("");
+  // const [agregarArtista] = useState("");
   const [letra, agregarLetra] = useState([]);
-  //const [info, agregarInfo] = useState({});
 
   // Método para consultar la API de Letras de canciones
   const consultarAPILetra = async busqueda => {
@@ -21,67 +20,31 @@ function App() {
     const resultado = await axios(url);
 
     // almacenar el artista que se buscó
-    agregarArtista(artista);
+    //agregarArtista(artista);
 
     // almacenar la letra en el state
     agregarLetra(resultado.data.lyrics);
   };
-/*
-  // Método para consultar la API de Información
-  const consultarAPIInfo = async () => {
-    if (artista) {
-      const url = `https://theaudiodb.com/api/v1/json/1/search.php?s=${artista}`;
-      const resultado = await axios(url);
-      agregarInfo(resultado.data.artists[0]);
-      // console.log(info);
-    }
-  };
-
-  useEffect(() => {
-    consultarAPIInfo();
-  }, [artista]);*/
 
   return (
-    <Fragment>
+    <div className="pruebados">
       <Navbar />
-      
+      <Background />
+      <div className="prueba">
+     
         <SearchLyric consultarAPILetra={consultarAPILetra} />
-
         <div className="container mt-5">
           <div className="row">
-            <div className="col-md-6">
-             
-            </div>
-            <div className="col-md-6">
+            
+            <div className="col-md-6 test">
               <Song letra={letra} />
             </div>
           </div>
         </div>
-
-      <Footer />
-    </Fragment>
-  );
-}
-
-export default App;
-
-
-
-//import { Navbar } from "./components/Navbar";
-//import { Background } from "./components/Background";
-//import { Lyric } from "./components/Lyric"
-//import { Footer } from "./components/Footer";
-//import { SearchLyric } from "./components/SearchLyric"
-
-/*function App() {
-  return (
-    <div>
-      <Navbar />
-      <Background />
-      <SearchLyric />
+      </div>
       <Footer />
     </div>
   );
 }
 
-export default App;*/
+export default App;

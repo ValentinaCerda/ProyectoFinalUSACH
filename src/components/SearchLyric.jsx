@@ -17,18 +17,17 @@ function SearchLyric({ consultarAPILetra }) {
   // cuando hacemos submit al form
   const enviarInformacion = e => {
     e.preventDefault();
-
     consultarAPILetra(busqueda);
   };
 
   return (
     <div className="fondo">
       <div className="container">
-        <h1 className="text-center mb-3">Buscador de Letras</h1>
+      <h1>Lyrics</h1>
         <div className="row mt-5">
-          <div className="col-4">
+          <div className="text-center">
             <form onSubmit={enviarInformacion}>
-              <div className="formulario mb-3">
+              <div className="formulario mb-3 text-center">
                 <label htmlFor="artista" className="form-label fw-bold">Artista</label>
                 <input
                   type="text"
@@ -49,14 +48,10 @@ function SearchLyric({ consultarAPILetra }) {
                   required
                 />
               </div>
-              <button type="submit" className="btn btn-info float-right">
+              <button type="submit" className="btn btn-info">
                 Buscar
               </button>
             </form>
-          </div>
-          <div className='resultado col-8 text-center'>
-            <p className='titulo fw-bold'>Letra </p>
-            <p className='fw-bold letra'><br /></p>
           </div>
         </div>
       </div>
