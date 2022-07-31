@@ -21,10 +21,10 @@ export const Lyric = ({ setLyricProps }) => {
         <div className='col-4'>
           <form onSubmit={submitPrevent}>
             <div className='formulario mb-3'>
-              <label for="artista" class="form-label fw-bold">Artista</label>
+              <label htmlFor="artista" className='form-label fw-bold'>Artista</label>
               <input className='form-control' type="text" value={inputValue} onChange={inputChange} />
 
-              <label for="cancion" class="form-label fw-bold">Canción</label>
+              <label htmlFor="cancion" className='form-label fw-bold'>Canción</label>
               <input className='form-control' type="text" />
             </div>
             <button className='btn btn-info'>Buscar</button>
