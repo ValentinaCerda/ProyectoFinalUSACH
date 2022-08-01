@@ -5,7 +5,7 @@ export const Navbar = () => {
     <div>
       <nav className='navbar navbar-expand-lg navbar-light bg-light titulo'>
         <div>
-          <a className='navbar-brand' href="index.html">Buscador de Letras</a>
+          <a className='navbar-brand title' href="index.html">Buscador de Letras</a>
         </div>
       </nav>
     </div>

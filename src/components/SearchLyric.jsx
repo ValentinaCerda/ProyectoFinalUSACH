@@ -21,17 +21,17 @@ function SearchLyric({ consultarAPILetra }) {
   };
 
   return (
-    <div className="fondo">
-      <div className="container">
-      <h1>Lyrics</h1>
+    <div className="fondo container">
+    
+        <h1>Lyrics</h1>
         <div className="row mt-5">
           <div className="text-center">
             <form onSubmit={enviarInformacion}>
-              <div className="formulario mb-3 text-center">
+              <div className="formulario text-center">
                 <label htmlFor="artista" className="form-label fw-bold">Artista</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control artista "
                   name="artista"
                   placeholder="Nombre Artista"
                   onChange={actualizarState}
@@ -41,20 +41,20 @@ function SearchLyric({ consultarAPILetra }) {
                 <label htmlFor="cancion" className='form-label fw-bold'>Canción</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control artista"
                   name="cancion"
                   placeholder="Nombre Canción"
                   onChange={actualizarState}
                   required
                 />
               </div>
-              <button type="submit" className="btn btn-info">
+              <button type="submit" className="btn boton">
                 Buscar
               </button>
             </form>
           </div>
         </div>
-      </div>
+      
     </div >
   );
 }

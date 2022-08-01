@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Navbar } from "./components/Navbar";
-import { Background } from "./components/Background";
 import SearchLyric from "./components/SearchLyric";
 import Song from "./components/Song";
-import { Footer } from "./components/Footer"
+import { Footer } from "./components/Footer";
 import axios from "axios";
 
 function App() {
@@ -13,30 +12,28 @@ function App() {
 
   // Método para consultar la API de Letras de canciones
   const consultarAPILetra = async busqueda => {
-    const { artista, cancion } = busqueda;
-    const url = `https://api.lyrics.ovh/v1/${artista}/${cancion}`;
-
-    // consultar la api
-    const resultado = await axios(url);
-
-    // almacenar el artista que se buscó
-    //agregarArtista(artista);
-
-    // almacenar la letra en el state
-    agregarLetra(resultado.data.lyrics);
+    try {
+      const { artista, cancion } = busqueda;
+      const url = `https://api.lyrics.ovh/v1/${artista}/${cancion}`;
+      const resultado = await axios(url);
+      agregarLetra(resultado.data.lyrics);
+    } catch (error) {
+      throw error
+    }
   };
+  
 
   return (
-    <div className="pruebados">
+    <div>
       <Navbar />
-      <Background />
-      <div className="prueba">
+      
+      <div className="fondo">
      
         <SearchLyric consultarAPILetra={consultarAPILetra} />
-        <div className="container mt-5">
+        <div className="mt-5">
           <div className="row">
             
-            <div className="col-md-6 test">
+            <div className="col-md-6">
               <Song letra={letra} />
             </div>
           </div>

@@ -1,56 +1,91 @@
-.prueba {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.514), rgba(255, 255, 255, 0.479)), url("img/fondo.png");
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Fugaz+One&family=Monoton&family=Mouse+Memoirs&family=Pacifico&family=Sigmar+One&display=swap');
+body {
+  overflow-x: hidden;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.514), rgba(255, 255, 255, 0.479)), url("https://lh4.googleusercontent.com/-uy0a6Zo3f8g/UL5yyNN10iI/AAAAAAAAAAg/rULQLNlofh8/s0-d/musica-m-sica-abstractos-fondos-de-pantalla-im-genssses-694337.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+.fondo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 520px;
-  max-height: 100%;
+  height: 100%;
+  width: 100%;
 }
-/*.pruebados {
-  height: 100vh;
-}*/
+
 .titulo {
-  text-align: center !important;
-  justify-content: center;
+  font-family: 'Sigmar One', cursive;
+  height: 5rem;
+  background-color: rgb(0, 255, 179); 
+  background-image: linear-gradient(rgb(253, 253, 253), rgb(71, 62, 74));
+}
+.title {
+  font-size: 1.563rem;
+  position: relative;
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  text-shadow: 2px 2px greenyellow;
+}
+@keyframes example {
+  0%   {left: 10%; top:0px;}
+  100%  {left: 215%; top:0px;}
 }
 h1 {
-  margin: 30px 0 30px 600px;
+  font-family: 'Monoton', cursive;
+  font-size: 1.875rem;
+  margin: 1.25rem 0 1.875rem 36.25rem;
   text-align: center;
+  text-shadow: 2px 2px #f1c540;
+  font-weight: 500;
 }
 form {
-  width: 300px;
-  margin-left: 300px;
+  width: 18.75rem;
+  margin-left: -33.75rem;
+  margin-top: 3rem;
 }
-
-.footer {
-  background-color: rgba(0, 0, 0, 0.2);
-  bottom: 0;
-  width: 100%;
+.formulario {
+  margin-bottom: 1.25rem;
 }
-form.card{
-  border: none;
+label {
+  font-family: 'Black Ops One', cursive;
+  font-size: 1.125rem;
 }
-
-.letra {
-  white-space: pre-wrap;
+.artista {
+  margin-bottom: 0.625rem;
+  border: 3px solid rgb(249, 159, 13);
+  border-radius: 8%;
+  font-family: 'Fugaz One', cursive;
 }
-.test {
-  max-height: 100%;
+.boton {
+  background-color: blueviolet;
+  font-family: 'Fugaz One', cursive;
+  margin-bottom: 10.55rem;
 }
-.card img {
-  width: 100%;
-  margin-bottom: 1rem;
+button:hover {
+  background-color: #f1c540;
 }
 h2 {
+  font-family: 'Fugaz One', cursive;
   margin-bottom: 1rem;
-  font-family: 'Work Sans', sans-serif; 
-  padding-bottom:10px;
   margin-top: 3rem;
+  padding-bottom: 0.625rem;
   text-align: end;
 }
-
-.card-body i {
-  font-size: 3rem;
-  margin-right: 3rem;
+.letra {
+  font-family: 'Fugaz One', cursive;
+  line-height: 1.25rem;
+  white-space: pre-wrap;
+  letter-spacing: normal;
+}
+.footer {
+  bottom: 0;
+  font-family: 'Sigmar One', cursive;
+  width: 100%;
+  height: 3.125rem;
+  background-color: rgb(0, 255, 179); 
+  background-image: linear-gradient(rgb(71, 62, 74), rgb(253, 253, 253));
+  text-shadow: 2px 2px #f549de;
 }

@@ -6,10 +6,10 @@ function Song({ letra }) {
 
   return (
     <Fragment>
-     
+      <div className="lyrics">
         <h2>Letra Canción</h2>
         <p className="letra">{letra}</p>
-      
+      </div>
     </Fragment>
   );
 }
